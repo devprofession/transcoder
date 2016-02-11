@@ -194,9 +194,9 @@ class Transcoder implements TranscoderInterface
                 return $transcoder->transcode($string, $from, $to);
             } catch (UnsupportedEncodingException $e) {
                 // Try again, now with the alias
-                if (!empty($this->charsetMap[$from])) {
+                if (!empty(static::$charsetMap[$from])) {
                     try {
-                        return $transcoder->transcode($string, $this->charsetMap[$from], $to);
+                        return $transcoder->transcode($string, static::$charsetMap[$from], $to);
                     } catch (UnsupportedEncodingException $e) {
                         // Ignore as long as the fallback transcoder is all right
                     }
