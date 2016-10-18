@@ -35,7 +35,7 @@ class IconvTranscoder implements TranscoderInterface
             E_NOTICE | E_USER_NOTICE
         );
         
-        $result = iconv($from, ($to ?: $this->defaultEncoding) . '//IGNORE//TRANSLIT', $string);
+        $result = iconv($from, ($to ?: $this->defaultEncoding) . '//TRANSLIT//IGNORE', $string);
         restore_error_handler();
         
         return $result;
