@@ -3,6 +3,12 @@
     "description": "Better encoding conversion for PHP",
     "keywords": [ "encoding", "utf-8", "iso", "mb", "iconv", "multibyte", "charset", "mb_convert_encoding" ],
     "license": "MIT",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/devprofession/transcoder.git"
+        }
+    ],
     "authors": [
         {
             "name": "David de Boer",
